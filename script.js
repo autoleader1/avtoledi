@@ -90,7 +90,6 @@ async function submitForm(event) {
 
     // Сбор данных
     const formData = {
-        sto: document.getElementById('sto').value,
         client_name: document.getElementById('client_name').value,
         client_phone: document.getElementById('client_phone').value,
         friend_name: document.getElementById('friend_name').value,
@@ -98,10 +97,6 @@ async function submitForm(event) {
     };
 
     // Клиентская валидация
-    if (!formData.sto) {
-        showMessage('error', 'Пожалуйста, выберите СТО.');
-        return;
-    }
     if (!formData.client_name || !formData.friend_name) {
         showMessage('error', 'Пожалуйста, заполните все поля ФИО.');
         return;
